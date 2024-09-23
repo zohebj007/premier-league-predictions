@@ -1,0 +1,4 @@
+[core]
+    remote = dvc-setup-premierleague
+['remote "dvc-setup-premierleague"']
+    url = s3://zohebmlops/datasets/
