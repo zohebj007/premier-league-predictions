@@ -1,4 +1,4 @@
-pip install dvc[s3]
+#pip install dvc[s3]
 #which dvc
 #export PATH=!$PATH:/opt/conda/bin/dvc
 
@@ -44,8 +44,8 @@ from sagemaker.workflow.model_step import ModelStep
 #df.head()
 
 #git fetch
-git checkout dvc-branch
-dvc pull
+#git checkout dvc-branch
+#dvc pull
 #df = pd.read_csv('matches.csv')
 #df.columns
 
