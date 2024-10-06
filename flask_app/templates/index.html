@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Premier League Prediction</title>
+</head>
+<body>
+    <h1>Premier League Match Result Predictor</h1>
+    <form action="/predict" method="POST">
+        <label for="round">Round:</label>
+        <input type="number" id="round" name="round" required><br><br>
+
+        <label for="venue">Venue:</label>
+        <select id="venue" name="venue" required>
+            <option value="Home">Home</option>
+            <option value="Away">Away</option>
+        </select><br><br>
+
+        <label for="gf">Goals For:</label>
+        <input type="number" id="gf" name="gf" required><br><br>
+
+        <label for="ga">Goals Against:</label>
+        <input type="number" id="ga" name="ga" required><br><br>
+
+        <label for="xg">Expected Goals (xG):</label>
+        <input type="number" step="0.01" id="xg" name="xg" required><br><br>
+
+        <label for="xga">Expected Goals Against (xGA):</label>
+        <input type="number" step="0.01" id="xga" name="xga" required><br><br>
+
+        <label for="poss">Possession:</label>
+        <input type="number" step="0.1" id="poss" name="poss" required><br><br>
+
+        <label for="sh">Shots:</label>
+        <input type="number" id="sh" name="sh" required><br><br>
+
+        <label for="sot">Shots on Target:</label>
+        <input type="number" id="sot" name="sot" required><br><br>
+
+        <label for="fk">Free Kicks:</label>
+        <input type="number" id="fk" name="fk" required><br><br>
+
+        <label for="pk">Penalty Kicks:</label>
+        <input type="number" id="pk" name="pk" required><br><br>
+
+        <label for="pkatt">Penalty Kick Attempts:</label>
+        <input type="number" id="pkatt" name="pkatt" required><br><br>
+
+        <label for="opponent">Opponent:</label>
+        <select id="opponent" name="opponent" required>
+            <option value="Aston Villa">Aston Villa</option>
+            <option value="Bournemouth">Bournemouth</option>
+            <!-- Add all other teams here -->
+        </select><br><br>
+
+        <label for="formation">Formation:</label>
+        <select id="formation" name="formation" required>
+            <option value="4-4-2">4-4-2</option>
+            <option value="4-3-3">4-3-3</option>
+            <!-- Add all other formations here -->
+        </select><br><br>
+
+        <label for="team">Your Team:</label>
+        <select id="team" name="team" required>
+            <option value="Liverpool">Liverpool</option>
+            <option value="Manchester City">Manchester City</option>
+            <!-- Add all other teams here -->
+        </select><br><br>
+
+        <input type="submit" value="Predict Result">
+    </form>
+
+    {% if prediction %}
+    <h2>Prediction: {{ prediction }}</h2>
+    {% endif %}
+</body>
+</html>
