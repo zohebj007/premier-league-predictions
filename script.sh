@@ -2,7 +2,7 @@
 #python3 -m venv venv
 
 # Activate the virtual environment
-source var/lib/jenkins/model/bin/activate
+#source var/lib/jenkins/model/bin/activate
 
 # Upgrade pip to the latest version
 #pip install --upgrade pip
